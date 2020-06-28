@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Waypoint CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+        <!-- Counter Up CND -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <style>
+
+html{
+    scroll-behavior: smooth;
+
+}
+*{
+    margin: 0; padding:0; box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+.nav_style{
+    background: linear-gradient(57deg, #000000, #03011a );
+
+
+
+}
+.nav_style a{
+    color: white;
+    font-family: 'Comic Neue', cursive;
+}
+
+
+/*/////////////////////////////////main header\\\\\\\\\\\\\\\\\\*/
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Baloo 2', cursive;
+}
+
+body {
+   background: linear-gradient(to right, #1a2980, #26D0CE);
+   background: linear-gradient(to right, #1a2980, #26D0CE);
+   background: linear-gradient(to right, #1a2980, #26D0CE);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.wrapper {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.statistic {
+    width: 100%;
+}
+
+.box {
+    transition:0.4s;
+    color: white;
+    
+
+    margin: 10px 15px;
+    padding: 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.box:hover{
+  transform: translate(0,-20px);
+  box-shadow: 0px 0px 28px 0px black;
+  background-color: #fafafa;   
+  border-radius: 50px; 
+  color: black;
+} 
+
+
+.box p {
+    font-size: 3rem;
+    
+     }
+
+.wrapper .box_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.box_wrapper .box {
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+
+.box_wrapper .box p {
+    font-size: 2.5rem;
+}
+
+
+/*Styiling the table*/
+table {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 10px 0;
+    text-align: center;
+    border-spacing: 1px;
+}
+
+tr:first-child {
+    background-color: #37474f;
+    color: #fafafa;
+    text-transform: uppercase;
+}
+
+th {
+    padding: 5px 0;
+    border: none;
+    border-spacing: 0;
+    background-color: black;
+    border-radius: 5px 5px 0px 0px;
+    border: 2px solid white;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0px;
+   
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+
+
+}
+
+tr:nth-child(odd) {
+    background-color: #34495E;
+    color: #fafafa;
+}
+
+tr td {
+    padding: 15px 0;
+
+
+}
+
+
+@media screen and (max-width:800px) {
+
+    .box_wrapper .box {
+        width: 94%;
+    }
+
+    .wrapper {
+        width: 100%;
+        position: absolute;
+        left: 0%;
+        transform: translateX(0%);
+    }
+
+    .wrapper .box_wrapper {
+        display: block;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    box_wrapper .box {
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+
+    table {
+        width: 100%;
+        padding: 0px 0px;
+        margin: 0px;
+    }
+
+    th {
+        font-size: 12px;
+    }
+
+}
+
+
+</style>
+
+</head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+    <title>COVID-19 TRACKER</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+</head>
+
+<body onload="fetch()">
+    <nav class="navbar navbar-expand-lg nav_style p-3">
+  <a class="navbar-brand pl-5" href="#">SAB BATADE AAPKO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <span style="color: white; margin-left: 200px; font-size: 25px"><b>How to track the CORONA Patient's counts using HTML CSS JavaScript</b></span>
+  </div>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto pr-9">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">COVID-19<span class="sr-only"></span></a>
+      </li>
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+
+
+
+
+<!-- Logo & Main Div -->
+        <div class="main_header">
+            <div class="row w-100 h-100">
+                <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
+
+                </div>
+
+            </div>
+        </div>
+
+    <br>
+    <br>
+    <br>
+    <div class="wrapper">
+        <h1 style="text-align: center;color: white;padding: 10px;">COVID-19 LIVE TRACKER
+            <hr><span id="today" style="font-size: 15px;"></span>
+            <!--            <hr><span id="yesterday"></span>-->
+        </h1>
+        <br>
+        <div class="statistic">
+
+
+            <div class="box_wrapper" >
+
+
+            <div class="box" style="color: red" >
+                <h2>Total Cases</h2><br>
+                <p id="total_cases" style="font-weight: bold;"></p>
+            </div>
+                <div class="box" >
+                    <h2>Active case</h2><br>
+                    <p id="active_cases"> </p>
+                </div>
+
+                <div class="box" style="color: lime" >
+                    <h2>Total Recovery</h2>
+                    <p id="total_recovered"> </p>
+                </div>
+
+                <div class="box">
+                    <h2>Today's cases</h2><br>
+                    <p id="new_case"> </p>
+                </div>
+
+                <div class="box" style="color: red" >
+                    <h2>Total Death</h2><br>
+                    <p id="total_death"> </p>
+                </div>
+            </div>
+
+            <table id="tbval">
+                <tr>
+                    <th>State</th>
+                    <th>Cases</th>
+                    <th>active cases</th>
+                    <th>total Deaths</th>
+                    <th>total recovered</th>
+                    <th>Deaths</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+        <!-- footer -->
+
+<script>
+
+    let total_cases = document.getElementById("total_cases");
+let active_cases  = document.getElementById("active_cases");
+let total_recovered = document.getElementById("total_recovered");
+let new_case = document.getElementById("new_case");
+let total_death = document.getElementById("total_death");
+
+
+// Fetching the Data from the server
+
+
+//Fetching the World Data
+fetch("https://api.covid19india.org/data.json", {
+    "method": "GET"
+})
+.then(response => response.json().then( data => {
+
+   total_cases.innerHTML = data['statewise'][0]['confirmed'];
+    active_cases.innerHTML = data['statewise'][0]['active'];
+    total_recovered.innerHTML = data['statewise'][0]['recovered'];
+    new_case.innerHTML = data['statewise'][0]['deltaconfirmed'];
+    total_death.innerHTML = data['statewise'][0]['deaths'];
+
+
+
+}));</script>
+
+<script >
+            function fetch(){
+
+              $.get("https://api.covid19india.org/data.json",
+                      function(data){
+
+                       // console.log(data['Countries'].length);
+
+                       var tbval=document.getElementById('tbval');
+
+                       for(var i=1;i<(data['statewise'].length);i++){
+                        var x = tbval.insertRow();
+                        
+
+                        x.insertCell(0);
+                        tbval.rows[i].cells[0].innerHTML= data['statewise'][i]['state'];
+                       
+                         x.insertCell(1);
+                        tbval.rows[i].cells[1].innerHTML= data['statewise'][i]['confirmed'];
+
+                         x.insertCell(2);
+                        tbval.rows[i].cells[2].innerHTML= data['statewise'][i]['active'];
+
+                         x.insertCell(3);
+                        tbval.rows[i].cells[3].innerHTML= data['statewise'][i]['deaths'];
+
+                         x.insertCell(4);
+                        tbval.rows[i].cells[4].innerHTML= data['statewise'][i]['deltaconfirmed'];
+
+                        x.insertCell(5);
+                        tbval.rows[i].cells[5].innerHTML= data['statewise'][i]['deltadeaths'];
+
+
+                       }
+                      }
+                )
+            }
+        </script>
+    <script>
+        var d = new Date();
+        document.getElementById("today").innerHTML = d;
+
+    </script>
+
+
+
+
+    <!--
+
+    <script>
+        var yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
+document.getElementById("yesterday").innerHTML = yesterday;
+    </script>
+-->
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>
